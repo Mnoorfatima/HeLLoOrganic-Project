@@ -7,8 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="l_green">#3AF426</color>
-    <color name="white">#DDBA2E</color>
+    <color name="y">#079C8E</color>
+    <color name="white">#FFFFFF</color>
     #FFB347
     <color name="bc">#007500</color>
-    <color name="lime">#FA754D</color>
+    <color name="lime">#D38870</color>
 </resources>

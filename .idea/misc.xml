@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/HeLLoOrganic1/app/src/main/res/drawable/back.xml" value="0.18796296296296297" />
+        <entry key="..\:/HeLLoOrganic1/app/src/main/res/layout/activity_login_signin.xml" value="0.16" />
+        <entry key="..\:/HeLLoOrganic1/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/HeLLoOrganic1/app/src/main/res/layout/fragment_signin_page.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mah Noor Fatima/AndroidStudioProjects/HelloOrganic/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
       </map>
     </option>
