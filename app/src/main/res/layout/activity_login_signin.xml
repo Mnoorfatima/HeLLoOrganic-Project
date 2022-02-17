@@ -31,7 +31,7 @@
             android:layout_marginLeft="43dp"
             android:background="@drawable/back"
             android:backgroundTint="@color/bc"
-            android:text="Sign In"
+            android:text="Sign Up"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
