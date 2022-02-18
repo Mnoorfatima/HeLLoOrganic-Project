@@ -35,18 +35,18 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textStyle="bold" />
+
         <Button
+            android:id="@+id/btnsigin"
             android:layout_width="130dp"
             android:layout_height="45dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/btnlogin"
+            android:background="@drawable/back"
             android:text="Log in"
             android:textColor="@color/white"
-            android:textStyle="bold"
             android:textSize="18sp"
-            android:layout_toRightOf="@+id/btnlogin"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/back"
-           android:id="@+id/btnsigin"
-            />
+            android:textStyle="bold" />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

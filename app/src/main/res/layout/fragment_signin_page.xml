@@ -40,16 +40,19 @@
           android:layout_marginTop="10dp"
           android:drawableLeft="@drawable/ic_baseline_security_24"
           android:drawablePadding="20dp"
+          android:inputType="textPassword"
           />
       <EditText
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:hint="Confirm Password"
+          android:inputType="textPassword"
           android:textSize="15sp"
           android:layout_margin="10dp"
           android:layout_marginTop="10dp"
           android:drawableLeft="@drawable/ic_baseline_security_24"
           android:drawablePadding="20dp"
+
           />
       <Button
           android:layout_width="130dp"

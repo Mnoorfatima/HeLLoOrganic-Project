@@ -3,12 +3,56 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".login_fragment">
+    tools:context=".login_fragment"
+    android:background="@drawable/background">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login "
+            android:layout_marginLeft="20dp"
+            android:textSize="28dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="130dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Email "
+            android:textSize="17sp"
+            android:layout_marginTop="40dp"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawablePadding="10dp"
+            android:layout_margin="10dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_baseline_security_24"
+            android:drawablePadding="20dp"
+            android:inputType="textPassword"
+            />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:text="LogIn"
+            android:textSize="17dp"
+            android:background="@drawable/back"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="20dp"
+            />
+
+    </LinearLayout>
 
 </FrameLayout>

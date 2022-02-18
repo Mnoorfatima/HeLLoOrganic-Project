@@ -17,8 +17,18 @@ public class LoginSignin extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //btn1.setVisibility(View.GONE);
                 FragmentTransaction fragmentTransaction=getSupportFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.relative,new signin_page()).commit();
+            }
+        });
+        btn2=findViewById(R.id.btnsigin);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //btn2.setVisibility(View.GONE);
+                FragmentTransaction fragmentTransaction1=getSupportFragmentManager().beginTransaction();
+                fragmentTransaction1.replace(R.id.relative,new login_fragment()).commit();
             }
         });
     }
