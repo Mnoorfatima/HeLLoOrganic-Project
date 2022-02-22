@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloOrganic">
         <activity
+            android:name=".Dashboard"
+            android:exported="false" />
+        <activity
             android:name=".LoginSignin"
             android:exported="false" />
         <activity
