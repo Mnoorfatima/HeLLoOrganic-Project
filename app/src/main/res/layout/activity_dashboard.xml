@@ -34,7 +34,9 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             app:cardCornerRadius="50dp"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            android:id="@+id/c1"
+            >
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -71,7 +73,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginBottom="10dp"
             app:cardCornerRadius="50dp"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            android:id="@+id/c2">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -108,7 +111,8 @@
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
             app:cardCornerRadius="50dp"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            android:id="@+id/c3">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -145,7 +149,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             app:cardCornerRadius="50dp"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            android:id="@+id/c4">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -182,7 +187,8 @@
             android:layout_marginTop="0dp"
             android:layout_marginRight="10dp"
             app:cardCornerRadius="50dp"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            android:id="@+id/c5">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -219,7 +225,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="0dp"
             app:cardCornerRadius="50dp"
-            app:cardElevation="8dp">
+            app:cardElevation="8dp"
+            android:id="@+id/c6">
 
             <LinearLayout
                 android:layout_width="wrap_content"
