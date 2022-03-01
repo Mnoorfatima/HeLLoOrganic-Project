@@ -10,6 +10,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloOrganic">
         <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".about_us"
+            android:exported="false" />
+        <activity
+            android:name=".contact_us"
+            android:exported="false" />
+        <activity
+            android:name=".favourite"
+            android:exported="false" />
+        <activity
+            android:name=".shope"
+            android:exported="false" />
+        <activity
+            android:name=".vist_us"
+            android:exported="false" />
+        <activity
             android:name=".Dashboard"
             android:exported="false" />
         <activity
