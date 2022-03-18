@@ -1,9 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vist_us">
+    tools:context=".vist_us"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical">
+<ViewFlipper
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/viewflipper"
+    />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Visit Us for Help "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We are Selling Fresh Fruits and Vegetables"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Our Health Directly Depend on Healthy Food."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="If you are Facing any problem in shop."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="If you Need any kind of help."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You can Ask a Question in Message Box."
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="50dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/y">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Question OR Suggestion"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"/>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="150dp"
+            android:id="@+id/m1"
+            android:padding="20dp"
+            android:minLines="6"
+            android:inputType="textImeMultiLine"
+
+            android:layout_marginTop="8dp"
+            android:background="@drawable/editextback"
+            android:hint="Enter Your Message"
+            android:layout_gravity="center"
+            android:textAlignment="center" />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:textAlignment="center"
+            android:text="Submit"
+            android:textSize="16dp"
+            android:background="@drawable/back"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+
+            />
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
