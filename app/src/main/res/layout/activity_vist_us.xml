@@ -101,8 +101,8 @@
             android:background="@drawable/back"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-
-            />
+            android:id="@+id/submit"
+                                />
 
 
 
