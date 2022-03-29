@@ -20,12 +20,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Visit Us for Help "
+        android:text="Visit Us"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         />
     <TextView
         android:layout_width="match_parent"
@@ -44,23 +44,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="If you are Facing any problem in shop."
+        android:text="Health is physical and mental wellness                                        A Condition of well-being"
         android:textAlignment="center"
         android:textSize="16sp"
         android:textColor="@color/black"/>
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="If you Need any kind of help."
-        android:textAlignment="center"
-        android:textSize="16sp"
-        android:textColor="@color/black"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="You can Ask a Question in Message Box."
+        android:text="Send Your FeedBack in Messege Box."
         android:textAlignment="center"
         android:textSize="16sp"
         android:textColor="@color/black"
@@ -73,7 +65,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Question OR Suggestion"
+            android:text="Customer FeedBack"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textStyle="bold"
@@ -89,7 +81,7 @@
 
             android:layout_marginTop="8dp"
             android:background="@drawable/editextback"
-            android:hint="Enter Your Message"
+            android:hint="Enter Your FeedBack"
             android:layout_gravity="center"
             android:textAlignment="center" />
         <Button
@@ -100,7 +92,7 @@
             android:textSize="16dp"
             android:background="@drawable/back"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
             android:id="@+id/submit"
                                 />
 
