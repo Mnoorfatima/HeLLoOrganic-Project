@@ -1,9 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".contact_us">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/contactback">
+        <ImageView
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:src="@drawable/app"/>
+    </LinearLayout>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/fb"
+        android:layout_width="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_height="70dp"
+        android:src="@drawable/mano1"
+        android:layout_marginLeft="35dp"/>
+    <TextView
+        android:layout_marginTop="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@+id/fb"
+        android:text="Hello0rganic FB"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+
+    <ImageView
+        android:id="@+id/wp"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="140dp"
+        android:src="@drawable/mano2" />
+    <TextView
+        android:layout_marginTop="160dp"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@+id/fb"
+        android:text="+923110040530"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/insta"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="230dp"
+        android:src="@drawable/mano3" />
+    <TextView
+        android:layout_marginTop="270dp"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_toRightOf="@+id/fb"
+        android:text="Instagram Official"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />>
+
+
+</RelativeLayout>
+</LinearLayout>
