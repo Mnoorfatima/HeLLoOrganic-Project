@@ -30,7 +30,7 @@ Button btn1;
             });
         });
        flipper=findViewById(R.id.viewflipper);
-       int imagearray[]={R.drawable.editextback,R.drawable.f2,R.drawable.f3,R.drawable.f4};
+       int imagearray[]={R.drawable.f1,R.drawable.f2,R.drawable.f3,R.drawable.f4};
         for (int i = 0; i<4 ; i++)
         {
             showimage(imagearray[i]);

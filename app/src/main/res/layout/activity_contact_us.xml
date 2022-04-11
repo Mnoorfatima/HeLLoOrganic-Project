@@ -26,15 +26,16 @@
         android:layout_height="70dp"
         android:src="@drawable/mano1"
         android:layout_marginLeft="35dp"/>
+
     <TextView
-        android:layout_marginTop="70dp"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
+        android:layout_marginTop="70dp"
         android:layout_toRightOf="@+id/fb"
         android:text="Hello0rganic FB"
-        android:textStyle="bold"
         android:textSize="20sp"
-        />
+        android:textStyle="bold"
+        android:id="@+id/txt1"/>
 
     <ImageView
         android:id="@+id/wp"
@@ -50,7 +51,8 @@
         android:layout_toRightOf="@+id/fb"
         android:text="+923110040530"
         android:textStyle="bold"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        android:id="@+id/txt2"/>
 
     <ImageView
         android:id="@+id/insta"
@@ -59,15 +61,16 @@
         android:layout_marginLeft="35dp"
         android:layout_marginTop="230dp"
         android:src="@drawable/mano3" />
+
     <TextView
-        android:layout_marginTop="270dp"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
+        android:layout_marginTop="270dp"
         android:layout_toRightOf="@+id/fb"
-        android:text="Instagram Official"
-        android:textStyle="bold"
+        android:text="HelloOrganic Official"
         android:textSize="20sp"
-        />>
+        android:textStyle="bold"
+        android:id="@+id/txt3"/>>
 
 
 </RelativeLayout>
