@@ -1,9 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".profile">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/y"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:padding="5dp"
+                        android:src="@drawable/gi" />
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/edt1"
+                        android:layout_marginTop="10dp" />
+                    <TextView
+                        android:id="@+id/t1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:paddingTop="10dp"
+                        android:text="Edit Profile"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+           <TextView
+               android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+               android:text="Mahnoor Fatima"
+               android:textStyle="bold"
+               android:textSize="16sp"
+               android:layout_marginLeft="20dp"
+               android:gravity="start|left"
+
+               />
+        </LinearLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:drawableLeft="@drawable/ic_baseline_notes_24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="bold"
+                    android:text="View Profile"
+                    android:textSize="16sp"
+                    android:textColor="@color/purple_700"
+                    android:layout_marginLeft="225dp"
+                    android:paddingTop="10dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="User Name"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:drawablePadding="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        />
+
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Enter you Name"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/editback"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="25dp">
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="User Mobile"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:drawablePadding="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@drawable/ic_baseline_mobile_friendly_24"
+                        />
+
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Enter you Mobile"
+                    android:inputType="number"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/editback"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="25dp">
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="User Birth Date"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:drawablePadding="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@drawable/ic_baseline_person_24"
+                        />
+
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Enter you Birth Date"
+                    android:inputType="date"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/editback"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="25dp">
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:text="User Address"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:drawablePadding="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+                        />
+
+                </LinearLayout>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:hint="Enter you Address"
+                    android:inputType="text"
+                    android:paddingLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/editback"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="15dp">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textSize="18dp"
+                         android:padding="3dp"
+                        android:textStyle="italic"
+                        android:hint="Update Profile Info"
+                        android:backgroundTint="@color/y"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>
