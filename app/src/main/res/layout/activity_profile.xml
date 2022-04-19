@@ -122,7 +122,7 @@
                     android:layout_marginRight="20dp"
                     android:textSize="16sp"
                     android:background="@drawable/editback"
-
+                    android:id="@+id/name"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -155,7 +155,7 @@
                     android:layout_marginRight="20dp"
                     android:textSize="16sp"
                     android:background="@drawable/editback"
-
+                    android:id="@+id/number"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -188,7 +188,7 @@
                     android:layout_marginRight="20dp"
                     android:textSize="16sp"
                     android:background="@drawable/editback"
-
+                    android:id="@+id/date"
                     />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -209,40 +209,46 @@
                         />
 
                 </LinearLayout>
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="20dp"
-                    android:hint="Enter you Address"
-                    android:inputType="text"
-                    android:paddingLeft="10dp"
-                    android:gravity="center_vertical"
-                    android:layout_marginRight="20dp"
-                    android:textSize="16sp"
-                    android:background="@drawable/editback"
 
-                    />
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:orientation="vertical"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="15dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/address"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/editback"
+                        android:gravity="center_vertical"
+                        android:hint="Enter you Address"
+                        android:inputType="text"
+                        android:paddingLeft="10dp"
+                        android:textSize="16sp"
+
+                        />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/y"
+                    android:gravity="center"
+                    android:hint="Submit Profile Info"
+                    android:padding="3dp"
+                    android:textColor="@color/black"
+                    android:textSize="18dp"
+                    android:textStyle="italic"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginBottom="5dp"
-                    android:elevation="15dp">
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:textSize="18dp"
-                         android:padding="3dp"
-                        android:textStyle="italic"
-                        android:hint="Update Profile Info"
-                        android:backgroundTint="@color/y"
-                        android:gravity="center"/>
-
-                </LinearLayout>
+                    android:layout_marginTop="20dp"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

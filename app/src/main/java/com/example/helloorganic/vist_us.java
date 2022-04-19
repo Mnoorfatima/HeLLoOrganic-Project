@@ -25,6 +25,7 @@ Button btn1;
             message msg=new message(edt1.getText().toString());
             Db.add(msg).addOnSuccessListener(v->{
                 Toast.makeText(vist_us.this, "Thanks for Feedback", Toast.LENGTH_SHORT).show();
+                edt1.setText("");
             }).addOnFailureListener(er->{
                 Toast.makeText(this, ""+er.getMessage(), Toast.LENGTH_SHORT).show();
             });
