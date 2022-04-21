@@ -23,6 +23,11 @@ public class profile extends AppCompatActivity {
            ProfileC pro=new ProfileC(edt1.getText().toString(),edt2.getText().length(),edt3.getText().toString(),edt4.getText().toString());
            db.add(pro).addOnSuccessListener(suc->{
                Toast.makeText(profile.this, "Register Successfully", Toast.LENGTH_SHORT).show();
+               edt1.setText("");
+               edt2.setText("");
+               edt3.setText("");
+               edt4.setText("");
+
            }).addOnFailureListener(er->{
                Toast.makeText(profile.this, "Register Failed", Toast.LENGTH_SHORT).show();
            });

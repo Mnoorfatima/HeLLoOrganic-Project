@@ -224,8 +224,6 @@
                         android:id="@+id/address"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="20dp"
                         android:background="@drawable/editback"
                         android:gravity="center_vertical"
                         android:hint="Enter you Address"
