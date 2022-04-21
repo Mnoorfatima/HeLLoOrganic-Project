@@ -8,12 +8,25 @@
     tools:context=".contact_us">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:background="@drawable/contactback">
+        android:layout_height="300dp">
         <ImageView
             android:layout_width="350dp"
             android:layout_height="300dp"
-            android:src="@drawable/app"/>
+            android:src="@drawable/app" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/y">
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:text="Feel Free to contact us"
+            android:textAlignment="center"/>
+
     </LinearLayout>
 <RelativeLayout
     android:layout_width="wrap_content"
@@ -21,11 +34,11 @@
 
     <ImageView
         android:id="@+id/fb"
-        android:layout_width="100dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="35dp"
         android:layout_marginTop="50dp"
-        android:layout_height="70dp"
-        android:src="@drawable/mano1"
-        android:layout_marginLeft="35dp"/>
+        android:src="@drawable/mano1" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,12 +48,13 @@
         android:text="Hello0rganic FB"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:id="@+id/txt1"/>
+        android:id="@+id/txt1"
+        android:layout_marginLeft="20dp"/>
 
     <ImageView
         android:id="@+id/wp"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="140dp"
         android:src="@drawable/mano2" />
@@ -52,20 +66,22 @@
         android:text="+923110040530"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:id="@+id/txt2"/>
+        android:id="@+id/txt2"
+        android:layout_marginLeft="20dp" />
 
     <ImageView
         android:id="@+id/insta"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginLeft="35dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="29dp"
         android:layout_marginTop="230dp"
         android:src="@drawable/mano3" />
 
     <TextView
+        android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_marginTop="270dp"
+        android:layout_marginTop="250dp"
         android:layout_toRightOf="@+id/fb"
         android:text="HelloOrganic Official"
         android:textSize="20sp"

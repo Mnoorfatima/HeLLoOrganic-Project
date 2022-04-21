@@ -124,12 +124,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_stars_24"></ImageView>
+                    android:src="@drawable/ic_baseline_help_center_24">
+                </ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Favourites"
+                    android:text="About "
                     android:textSize="18sp"
                     android:textStyle="bold"></TextView>
 
@@ -167,7 +168,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Contact Us"
+                    android:text="Contact "
                     android:textSize="18sp"
                     android:textStyle="bold"></TextView>
 
@@ -200,12 +201,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_help_center_24"></ImageView>
+                    android:src="@drawable/ic_baseline_exit_to_app_24">
+                    </ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="About Us"
+                    android:text="Exit App"
                     android:textSize="18sp"
                     android:textStyle="bold"></TextView>
 

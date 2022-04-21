@@ -29,12 +29,12 @@
                     android:layout_gravity="center">
 
                     <de.hdodenhof.circleimageview.CircleImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
                         android:layout_gravity="center"
-                        android:layout_marginTop="5dp"
+                        android:layout_marginTop="15dp"
                         android:padding="5dp"
-                        android:src="@drawable/gi" />
+                        android:src="@drawable/icon" />
 
 
                 </FrameLayout>
@@ -66,7 +66,7 @@
            <TextView
                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-               android:text="Mahnoor Fatima"
+               android:text="Hello Organic"
                android:textStyle="bold"
                android:textSize="16sp"
                android:layout_marginLeft="20dp"
@@ -243,7 +243,7 @@
                     android:padding="3dp"
                     android:textColor="@color/black"
                     android:textSize="18dp"
-                    android:textStyle="italic"
+                    android:textStyle="bold"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="20dp"/>
