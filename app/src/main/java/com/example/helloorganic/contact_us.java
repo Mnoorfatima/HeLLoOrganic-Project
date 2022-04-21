@@ -35,7 +35,7 @@ public class contact_us extends AppCompatActivity {
         txt3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gourl("https://www.youtube.com/channel/UCYkpgtwznyJleHFpjnJ1gyQ");
+                gourl("https://www.instagram.com/organic.hello/");
 
             }
         });
