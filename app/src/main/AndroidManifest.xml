@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloOrganic">
         <activity
+            android:name=".order2"
+            android:exported="false" />
+        <activity
+            android:name=".order"
+            android:exported="false" />
+        <activity
             android:name=".profile"
             android:exported="false" />
         <activity
