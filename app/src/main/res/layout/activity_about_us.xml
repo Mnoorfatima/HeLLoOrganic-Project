@@ -14,15 +14,20 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/app"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="0dp"/>
 </LinearLayout>
-
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Rate"
-        android:textSize="40sp"
+        android:layout_marginTop="30dp"
+        android:textSize="30sp"
         android:textAlignment="center"
         android:id="@+id/r1"/>
     <RatingBar
@@ -53,13 +58,15 @@
         android:id="@+id/btn1"
         android:background="@drawable/back"
         android:textSize="16sp"/>
+
     <TextView
-        android:layout_marginTop="20dp"
+        android:id="@+id/showrating"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginLeft="120dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/showrating"
-        />
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>
 </LinearLayout>

@@ -124,13 +124,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_help_center_24">
+                    android:src="@drawable/ic_baseline_stars_24">
                 </ImageView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="About "
+                    android:text="Rate Us "
                     android:textSize="18sp"
                     android:textStyle="bold"></TextView>
 
@@ -207,7 +207,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Exit App"
+                    android:text="Logout"
                     android:textSize="18sp"
                     android:textStyle="bold"></TextView>
 

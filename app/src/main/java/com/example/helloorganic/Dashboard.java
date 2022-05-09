@@ -53,7 +53,9 @@ public class Dashboard extends AppCompatActivity {
         c5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Dashboard.this,favourite.class);
+                Intent intent = new Intent(Dashboard.this,LoginSignin.class);
+
+                //Intent intent=new Intent(Dashboard.this,favourite.class);
                 startActivity(intent);
             }
         });
