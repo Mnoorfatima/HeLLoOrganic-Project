@@ -1,8 +1,10 @@
 package com.example.helloorganic;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -71,4 +73,26 @@ public class Dashboard extends AppCompatActivity {
 
     }
 
+
+    @Override
+    public void onBackPressed() {
+         AlertDialog.Builder builder=new AlertDialog.Builder(this);
+                builder.setMessage("Are you sure you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        finishAffinity();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                    }
+                });
+
+        AlertDialog alertDialog= builder.create();
+        alertDialog.show();
+    }
 }
