@@ -57,10 +57,16 @@ public class RecylearAdapter extends RecyclerView.Adapter<RecylearAdapter.ViewHo
         public void onClick(View view) {
             int position=getAdapterPosition();
             Toast.makeText(context, "position"+position, Toast.LENGTH_SHORT).show();
-            Intent intent= new Intent(context,order.class);
-            context.startActivities(new Intent[]{intent});
-           // Intent intent1= new Intent(context,order2.class);
-          //  context.startActivities(new Intent[]{intent1});
+           if (position==0){
+             Intent intent= new Intent(context,order.class);
+            context.startActivities(new Intent[]{intent});}
+            else if (position==1){
+                Intent intent1=new Intent(context,order2.class);
+                context.startActivities(new Intent[]{intent1});
+            }
+            else if(position==2){
+           Intent intent2= new Intent(context,order3.class);
+            context.startActivities(new Intent[]{intent2});}
         }
     }
 }

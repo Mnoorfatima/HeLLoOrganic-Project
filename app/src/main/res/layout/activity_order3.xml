@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".order2"
-    android:orientation="vertical">
-    <LinearLayout
+    tools:context=".order3"
+    android:orientation="vertical"
+    >
+    <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/apple2"/>
-
+        android:background="@drawable/bana"/>
 
 </LinearLayout>
