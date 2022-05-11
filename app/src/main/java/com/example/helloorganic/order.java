@@ -1,7 +1,15 @@
 package com.example.helloorganic;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.CursorLoader;
+import androidx.loader.content.Loader;
 
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +20,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class order extends AppCompatActivity {
+import com.example.helloorganic.Database.OrderContract;
+
+public class order extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
     ImageView imageView;
     ImageButton plusquantity,minusquantity;
     TextView quantitynumber,drinkname,coffeprice;
@@ -34,8 +44,19 @@ public class order extends AppCompatActivity {
         coffeprice=findViewById(R.id.coffeePrice);
         addTopping=findViewById(R.id.addToppings);
         addExtraCream=findViewById(R.id.addCream);
-
+        addtoCart=findViewById(R.id.addtocart);
         drinkname.setText("Mango");
+        //
+        addtoCart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(order.this,summary.class);
+                startActivity(intent);
+
+
+                SaveCart();
+            }
+        });
         plusquantity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,8 +92,49 @@ public class order extends AppCompatActivity {
         });
     }
 
+    private boolean SaveCart() {
+
+        // getting the values from our views
+        String name = drinkname.getText().toString();
+        String price = coffeprice.getText().toString();
+        String quantity = quantitynumber.getText().toString();
+
+        ContentValues values = new ContentValues();
+        values.put(OrderContract.OrderEntry.COLUMN_NAME, name);
+        values.put(OrderContract.OrderEntry.COLUMN_PRICE, price);
+        values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, quantity);
+
+        if (addExtraCream.isChecked()) {
+            values.put(OrderContract.OrderEntry.COLUMN_BASKET, "Has Cream: YES");
+        } else {
+            values.put(OrderContract.OrderEntry.COLUMN_BASKET, "Has Cream: NO");
+
+        }
+
+        if (addTopping.isChecked()) {
+            values.put(OrderContract.OrderEntry.COLUMN_BAG, "Has Toppings: YES");
+        } else {
+            values.put(OrderContract.OrderEntry.COLUMN_BAG, "Has Toppings: NO");
+
+        }
+
+        if (mCurrentCartUri == null) {
+            Uri newUri = getContentResolver().insert(OrderContract.OrderEntry.CONTENT_URI, values);
+            if (newUri==null) {
+                Toast.makeText(this, "Failed to add to Cart", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, "Success  adding to Cart", Toast.LENGTH_SHORT).show();
+
+            }
+        }
+
+        hasAllRequiredValues = true;
+        return hasAllRequiredValues;
+
+    }
+
     private int CalculatePrice(CheckBox addExtraCream, CheckBox addTopping) {
-        int basePrice=100;
+        int basePrice=150;
         if (addExtraCream.isChecked()){
             basePrice=basePrice+100;
         }
@@ -84,5 +146,54 @@ public class order extends AppCompatActivity {
 
     private void displayquantity() {
         quantitynumber.setText(String.valueOf(quantity));
+    }
+
+    @NonNull
+    @Override
+    public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+        String[] project={
+                OrderContract.OrderEntry.COLUMN_NAME,
+                OrderContract.OrderEntry.COLUMN_PRICE,
+                OrderContract.OrderEntry.COLUMN_QUANTITY,
+                OrderContract.OrderEntry.COLUMN_BAG,
+                OrderContract.OrderEntry.COLUMN_BASKET
+
+        };
+        return new CursorLoader(this,mCurrentCartUri,project,null,null,null);
+    }
+
+    @Override
+    public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor cursor) {
+
+        if (cursor == null || cursor.getCount() < 1) {
+            return;
+        }
+
+        if (cursor.moveToFirst()) {
+
+            int name = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_NAME);
+            int price = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
+            int quantity = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
+            int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BAG);
+            int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BASKET);
+
+
+            String nameofdrink = cursor.getString(name);
+            String priceofdrink = cursor.getString(price);
+            String quantityofdrink = cursor.getString(quantity);
+            String yeshasCream = cursor.getString(hasCream);
+            String yeshastopping = cursor.getString(hasTopping);
+
+            drinkname.setText(nameofdrink);
+            coffeprice.setText(priceofdrink);
+            quantitynumber.setText(quantityofdrink);
+        }
+
+
+    }
+
+    @Override
+    public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+
     }
 }
