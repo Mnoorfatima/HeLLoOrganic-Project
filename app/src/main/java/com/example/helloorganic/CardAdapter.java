@@ -41,22 +41,22 @@ public class CardAdapter extends CursorAdapter {
         int name = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_NAME);
         int priceofdrink = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
         int quantityofdrink = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
-        int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BAG);
-        int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BAG);
+       // int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BAG);
+       // int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BAG);
 
 
         String nameofdrink = cursor.getString(name);
         String pricesofdrink = cursor.getString(priceofdrink);
         String quantitysofdrink = cursor.getString(quantityofdrink);
-        String yeshasCream = cursor.getString(hasCream);
-        String yeshastopping = cursor.getString(hasTopping);
+       // String yeshasCream = cursor.getString(hasCream);
+       // String yeshastopping = cursor.getString(hasTopping);
 
 
 
         drinkName.setText(nameofdrink);
         price.setText(pricesofdrink);
-        yesCream.setText(yeshasCream);
-        yesTopping.setText(yeshastopping);
+       // yesCream.setText(yeshasCream);
+       // yesTopping.setText(yeshastopping);
         quantity.setText(quantitysofdrink);
 
 

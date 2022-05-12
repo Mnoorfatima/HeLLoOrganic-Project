@@ -23,12 +23,12 @@ public class OrderProvider extends ContentProvider {
         mHelper=new OrderHelper(getContext());
         return true;
     }
-    @Override
+    //@Override
     public Cursor query( Uri uri,  String[] strings,  String s,  String[] strings1,  String s1) {
 
 
         // since we are querying from the databse
-        SQLiteDatabase database = mHelper.getReadableDatabase();
+      SQLiteDatabase database = mHelper.getReadableDatabase();
         Cursor cursor;
         int match  = sUriMatcher.match(uri);
         switch (match) {
@@ -37,7 +37,7 @@ public class OrderProvider extends ContentProvider {
                 break;
 
             default:
-                throw new IllegalArgumentException("CANT QUERY");
+              throw new IllegalArgumentException("CANT QUERY");
         }
 
         cursor.setNotificationUri(getContext().getContentResolver(), uri);

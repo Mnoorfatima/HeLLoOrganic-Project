@@ -21,6 +21,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.helloorganic.Database.OrderContract;
+import com.example.helloorganic.Database.OrderHelper;
 
 public class order extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
     ImageView imageView;
@@ -31,6 +32,7 @@ public class order extends AppCompatActivity implements LoaderManager.LoaderCall
     int quantity;
     public Uri mCurrentCartUri;
     boolean hasAllRequiredValues=false;
+    OrderHelper orderHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +47,13 @@ public class order extends AppCompatActivity implements LoaderManager.LoaderCall
         addTopping=findViewById(R.id.addToppings);
         addExtraCream=findViewById(R.id.addCream);
         addtoCart=findViewById(R.id.addtocart);
+        orderHelper=new OrderHelper(order.this);
+
         drinkname.setText("Mango");
         //
         addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(order.this,summary.class);
-                startActivity(intent);
-
 
                 SaveCart();
             }
@@ -98,8 +99,17 @@ public class order extends AppCompatActivity implements LoaderManager.LoaderCall
         String name = drinkname.getText().toString();
         String price = coffeprice.getText().toString();
         String quantity = quantitynumber.getText().toString();
+        Boolean insert=orderHelper.Insert(name,quantity,price);
+        Toast.makeText(order.this, "Order Place Successfully", Toast.LENGTH_SHORT).show();
 
-        ContentValues values = new ContentValues();
+        Intent intent=new Intent(order.this,showorder.class);
+        intent.putExtra("name","name "+name);
+        intent.putExtra("price","price" +price);
+        intent.putExtra("quantity","Quantity"+quantity);
+
+        startActivity(intent);
+        //Toast.makeText(this, name+" "+price+""+quantity, Toast.LENGTH_SHORT).show();
+      /*  ContentValues values = new ContentValues();
         values.put(OrderContract.OrderEntry.COLUMN_NAME, name);
         values.put(OrderContract.OrderEntry.COLUMN_PRICE, price);
         values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, quantity);
@@ -127,7 +137,7 @@ public class order extends AppCompatActivity implements LoaderManager.LoaderCall
 
             }
         }
-
+*/
         hasAllRequiredValues = true;
         return hasAllRequiredValues;
 
@@ -155,8 +165,8 @@ public class order extends AppCompatActivity implements LoaderManager.LoaderCall
                 OrderContract.OrderEntry.COLUMN_NAME,
                 OrderContract.OrderEntry.COLUMN_PRICE,
                 OrderContract.OrderEntry.COLUMN_QUANTITY,
-                OrderContract.OrderEntry.COLUMN_BAG,
-                OrderContract.OrderEntry.COLUMN_BASKET
+              //  OrderContract.OrderEntry.COLUMN_BAG,
+                //OrderContract.OrderEntry.COLUMN_BASKET
 
         };
         return new CursorLoader(this,mCurrentCartUri,project,null,null,null);
@@ -174,15 +184,15 @@ public class order extends AppCompatActivity implements LoaderManager.LoaderCall
             int name = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_NAME);
             int price = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
             int quantity = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
-            int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BAG);
-            int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BASKET);
+           // int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BAG);
+           // int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_BASKET);
 
 
             String nameofdrink = cursor.getString(name);
             String priceofdrink = cursor.getString(price);
             String quantityofdrink = cursor.getString(quantity);
-            String yeshasCream = cursor.getString(hasCream);
-            String yeshastopping = cursor.getString(hasTopping);
+          //  String yeshasCream = cursor.getString(hasCream);
+           // String yeshastopping = cursor.getString(hasTopping);
 
             drinkname.setText(nameofdrink);
             coffeprice.setText(priceofdrink);

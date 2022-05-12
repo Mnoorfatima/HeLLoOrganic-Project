@@ -1,5 +1,6 @@
 package com.example.helloorganic.Database;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -20,20 +21,33 @@ public class OrderHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String SQL_TABLE="CREATE TABLE "+OrderContract.OrderEntry.TABLE_NAME+"("
-                + OrderContract.OrderEntry._ID+"INTEGER PRIMARY KEY AUTOINCREMENT,"
-                +OrderContract.OrderEntry.TABLE_NAME+"TEXT NOT NULL,"
-                +OrderContract.OrderEntry.COLUMN_QUANTITY+"TEXT NOT NULL,"
-                +OrderContract.OrderEntry.COLUMN_PRICE+"TEXT NOT NULL,"
-                +OrderContract.OrderEntry.COLUMN_BASKET+"TEXT NOT NULL,"
-                +OrderContract.OrderEntry.COLUMN_BAG+"TEXT NOT NULL);";
+        db.execSQL("CREATE TABLE ordring(ID INTEGER PRIMARY KEY AUTOINCREMENT,  name TEXT,Quantity TEXT,price TEXT)");
+        //String SQL_TABLE="CREATE TABLE "+OrderContract.OrderEntry.TABLE_NAME+"("
+          //      + OrderContract.OrderEntry._ID+" INTEGER PRIMARY KEY ,"
+            //    +OrderContract.OrderEntry.TABLE_NAME+"TEXT NOT NULL,"
+              //  +OrderContract.OrderEntry.COLUMN_QUANTITY+"TEXT NOT NULL,"
+               // +OrderContract.OrderEntry.COLUMN_PRICE+"TEXT NOT NULL)";
 
-                db.execSQL(SQL_TABLE);
+                //db.execSQL(SQL_TABLE);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
+    }
+    public Boolean Insert(String name,String quantity,String price){
+        SQLiteDatabase sqLiteDatabase=this.getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("name ",name);
+        contentValues.put("quantity",quantity);
+        contentValues.put("price",price);
+        long result =sqLiteDatabase.insert("ordring",null,contentValues);
+        if (result==-1){
+            return  false;
+        }
+        else {
+            return true;
+        }
     }
 }

@@ -35,8 +35,8 @@ public class summary extends AppCompatActivity implements LoaderManager.LoaderCa
                 OrderContract.OrderEntry.COLUMN_NAME,
                 OrderContract.OrderEntry.COLUMN_PRICE,
                 OrderContract.OrderEntry.COLUMN_QUANTITY,
-                OrderContract.OrderEntry.COLUMN_BAG,
-                OrderContract.OrderEntry.COLUMN_BASKET
+               // OrderContract.OrderEntry.COLUMN_BAG,
+             //   OrderContract.OrderEntry.COLUMN_BASKET
 
         };
 
