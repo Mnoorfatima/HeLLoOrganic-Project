@@ -7,22 +7,46 @@
     tools:context=".showorder"
     android:orientation="vertical">
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txt1"
+        android:textSize="30sp"
         android:textStyle="bold"
-        android:textSize="40dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt2"
-        android:textStyle="bold"
-        android:textSize="40dp"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txt3"
-        android:textStyle="bold"
-        android:textSize="40dp"/>
+        android:textAlignment="center"
+        android:text="Order DetaiL"
+        android:layout_marginTop="120dp"
+        android:background="@color/y"
+
+        />
+        <TextView
+            android:layout_marginTop="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt1"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="100dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt2"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="100dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt3"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginLeft="100dp"/>
+
+    <ImageView
+        android:layout_marginTop="0dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/app"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

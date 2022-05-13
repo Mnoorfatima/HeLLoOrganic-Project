@@ -103,9 +103,9 @@ public class order extends AppCompatActivity implements LoaderManager.LoaderCall
         Toast.makeText(order.this, "Order Place Successfully", Toast.LENGTH_SHORT).show();
 
         Intent intent=new Intent(order.this,showorder.class);
-        intent.putExtra("name","name "+name);
-        intent.putExtra("price","price" +price);
-        intent.putExtra("quantity","Quantity"+quantity);
+        intent.putExtra("name","Name "+"  "+name);
+        intent.putExtra("price","Price "+"  " +price);
+        intent.putExtra("quantity","Quantity "+"  "+quantity+"kg");
 
         startActivity(intent);
         //Toast.makeText(this, name+" "+price+""+quantity, Toast.LENGTH_SHORT).show();

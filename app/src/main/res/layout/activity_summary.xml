@@ -34,16 +34,16 @@
                 android:id="@+id/list"/>
 
             <Button
+                android:id="@+id/clearthedatabase"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
-                android:layout_marginLeft="30dp"
+                android:layout_alignParentBottom="true"
                 android:layout_centerInParent="true"
-                android:text="Clear The DATABASE"
-                android:textColor="@android:color/white"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:background="@android:color/holo_red_dark"
-                android:id="@+id/clearthedatabase"
-                android:layout_alignParentBottom="true"/>
+                android:text="Clear The DATABASE"
+                android:textColor="@android:color/white" />
         </RelativeLayout>
 
 
